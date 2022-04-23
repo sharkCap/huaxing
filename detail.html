@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!--nva-->
+  <div class="head_box">
+    <div class="head-box-home">
+      <h1 class="head-logo">
+        河南华兴钻石科技有限公司
+      </h1>
+      <p>
+        联系电话：18803880857
+      </p>
+    </div>
+
+  </div>
+
+  <!--正文-->
+  <div class="zw_bg">
+    <div class="zw-box">
+      <div class="ny-box">
+        <h1>内圆磨削用超硬材料砂轮Superhard Materials Grinding Wheels for Internal Grinding</h1>
+      </div>
+      <div class="wd">
+
+        <p style="text-align:center">
+          <span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">
+            <strong><span style="color: rgb(91, 155, 213);">
+                <img src="./img/company.jpg" title="" alt="内圆磨削用超硬材料砂轮1 (2).png" />
+              </span>
+            </strong>
+          </span>
+        </p>
+
+
+        <p style="margin-left: 32px; text-indent: 0px; text-align: left;">
+          <span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px; color: rgb(79, 129, 189);">
+            <strong>
+              <span style="font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">主要特点</span>
+            </strong>
+          </span>
+        </p>
+
+        <p style="margin-left: 32px; text-indent: 0px; text-align: left;">
+          <span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">磨削效率高/ 加工工件精度高/ 工件尺寸一致性好/ 砂轮使用寿命长</span>
+        </p>
+
+      </div>
+    </div>
+  </div>
+  <!--底部-->
+  <div class="foot-bg">
+    <div class="foot-box">
+      <div class="foot-left" data-scroll-reveal="enter left">
+        <div class="foot-nva">
+          <dl>
+            <dd>
+              <p>联系地址：</p>
+              河南省商丘市柘城县工业园区学府大道南
+            </dd>
+            <dd>
+              <p>联系电话：</p>
+              18803880857
+            </dd>
+            <dd>
+              <p>E-mail：</p>
+              627136493@qq.com
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<link rel="stylesheet" href="./css/style.css" />
+<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="./js/scrollreveal.js"></script>
+<script>
+  const data = JSON.parse(localStorage.getItem('productInfo'))
+  console.log(data);
+  document.querySelector('.ny-box h1').innerHTML = data.title;
+  console.log(document.querySelector('.wd'));
+
+  let str = '';
+  data.info.forEach(el => {
+    console.log(el);
+    str += `
+      <p style="text-align:center">
+          <span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">
+            <strong>
+              <span style="color: rgb(91, 155, 213);">
+                <img src="${el.image}" />
+              </span>
+            </strong>
+          </span>
+        </p>
+
+
+        <p style="margin-left: 32px; text-indent: 0px; text-align: left;">
+          <span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px; color: rgb(79, 129, 189);">
+            <strong>
+              <span style="font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">${el.subTitle}</span>
+            </strong>
+          </span>
+        </p>
+
+        <p style="margin-left: 32px; text-indent: 0px; text-align: left;">
+          <span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">${el.info}</span>
+        </p>
+     `;
+  });
+  $('.wd').html(str);
+
+</script>
+
+</body>
+
+</html>
