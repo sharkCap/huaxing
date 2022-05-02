@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>河南华兴钻石科技有限公司</title>
 </head>
 
 <body>
@@ -52,6 +52,12 @@
           </dl>
         </div>
       </div>
+      <div class="foot-yj">
+        <p>Copyright © 河南华兴钻石科技有限公司 版权所有
+        </p>
+        <h2><a href="http://www.huaxingdo.com/img/license.png" rel="nofollow" target="_blank">营业执照公示</a></h2>
+        <h2><a href="https://beian.miit.gov.cn/" rel="nofollow" target="_blank">豫ICP备2022011084号-1</a></h2>
+      </div>
     </div>
   </div>
 </body>
@@ -60,19 +66,16 @@
 <script type="text/javascript" src="./js/scrollreveal.js"></script>
 <script>
   const data = JSON.parse(localStorage.getItem('productInfo'))
-  console.log(data);
   document.querySelector('.ny-box h1').innerHTML = data.title;
-  console.log(document.querySelector('.wd'));
 
   let str = '';
   data.info.forEach(el => {
-    console.log(el);
     str += `
       <p style="text-align:center">
           <span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">
             <strong>
               <span style="color: rgb(91, 155, 213);">
-                <img src="${el.image}" />
+                <img src="${el.image ? el.image : ''}" />
               </span>
             </strong>
           </span>
@@ -82,13 +85,13 @@
         <p style="margin-left: 32px; text-indent: 0px; text-align: left;">
           <span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px; color: rgb(79, 129, 189);">
             <strong>
-              <span style="font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">${el.subTitle}</span>
+              <span style="font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">${el.subTitle ? el.subTitle : ''}</span>
             </strong>
           </span>
         </p>
 
         <p style="margin-left: 32px; text-indent: 0px; text-align: left;">
-          <span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">${el.info}</span>
+          <span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">${el.info ? el.info : ''}</span>
         </p>
      `;
   });

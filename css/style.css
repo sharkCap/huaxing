@@ -663,7 +663,6 @@ h1,h2,h3,h4,h5,h6{
 .foot-left{
 	width: 624px;
 	padding-top: 20px;
-	padding-bottom: 44px;
 }
 .foot-link{
 	padding-top: 52px;
@@ -1400,6 +1399,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .head-box-home .head-logo {
+  white-space: nowrap;
   padding-top: 15px;
   font-family: "楷体",
     "楷体_GB2312";
